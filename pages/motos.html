@@ -13,11 +13,18 @@
     <div class="miContenedor">
         <div class="card">
             <div class="card-body">
-                <form action="javascript:void(0)" onsubmit="">
-                    <div class="form-group">
+                <form action="javascript:void(0)" onsubmit="guardarMoto()">
+                    <div class="form-group" id="placa">
                         <label for="placa">Placa</label>
                         <input type="text" class="form-control" id="txtPlaca"
                             placeholder="Ingrese la placa de la moto" required>
+                    </div>
+                    <div class="form-group" id="estado">
+                        <label for="exampleFormControlSelect1">Estado</label>
+                        <select class="form-control" id="cmbEstados">
+                            <option value="en reparacion">en reparacion</option>
+                            <option value="reparada">reparada</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="clase">Clase</label>
@@ -58,7 +65,7 @@
                     </div>
                     <div class="form-group">
                         <label for="nroTecnomecanica">Numero de la tecnomecanica</label>
-                        <input type="number" class="form-control" id="txtNumeroTecnomecanita"
+                        <input type="number" class="form-control" id="txtNumeroTecnomecanica"
                             placeholder="Ingrese el numero de la tecnomecanica" required>
                     </div>
                     <div class="form-group">
@@ -67,7 +74,7 @@
                             placeholder="Ingrese la fecha de vencimiento de la tecnomecanica" required>
                     </div>
                     <button type="submit" class="btn btn-primary" id="btnCrearMoto">Ingresar moto</button>
-                    <button type="button" class="btn btn-primary" onclick="" id="btnActualizarMoto">Actualizar moto</button>    
+                    <button type="button" class="btn btn-primary" onclick="actualizarMoto()" id="btnActualizarMoto">Actualizar moto</button>    
                 </form>
                 <table class="table">
                     <thead>
@@ -75,8 +82,7 @@
                         <th scope="col">Placa</th>
                         <th scope="col">identificacion del propietario</th>
                         <th scope="col">Marca</th>
-                        <th scope="col">Clase</th>
-                        <th scope="col">Modelo</th>
+                        <th scope="col">Estado</th>
                         <th scope="col">Mas detalles</th>
                         <th scope="col">Editar</th>
                         <th scope="col">Eliminar</th>
@@ -85,7 +91,7 @@
                     <tbody id="listaMotos">
                     </tbody>
                   </table>
-                  <div id="mensaje">
+                  <div id="mensajeMotos">
 
                   </div>
             </div>

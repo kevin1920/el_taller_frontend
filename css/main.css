@@ -7,6 +7,10 @@
     display: none;
 }
 
+#estado{
+    display: none;
+}
+
 #btnCrearUsuario{
     margin-bottom: 10px;
 }

@@ -18,7 +18,7 @@ let validarLogin = () => {
             limpiarCampos()
             data = ""
             mensaje.innerHTML = data
-            //location.href="../pages/motos.html"
+            location.href="../pages/motos.html"
         }else{
             data = `<div class="alert alert-danger" role="alert">
             El documento y/o contraseña es incorrecta <a href="#" class="alert-link"></a>
