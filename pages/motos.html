@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <h1 id="titulo">Motos</h1>
+    <div class="miContenedor">
+        <div class="card">
+            <div class="card-body">
+                <form action="javascript:void(0)" onsubmit="">
+                    <div class="form-group">
+                        <label for="placa">Placa</label>
+                        <input type="text" class="form-control" id="txtPlaca"
+                            placeholder="Ingrese la placa de la moto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clase">Clase</label>
+                        <input type="text" class="form-control" id="txtClase" placeholder="Ingrese la clase de la moto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <input type="text" class="form-control" id="txtMarca" placeholder="Ingrese la marca de la moto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" class="form-control" id="txtModelo" placeholder="Ingrese el modelo de la moto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" id="txtColor"
+                            placeholder="Ingrese el color de la moto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cilindraje">Cilindraje</label>
+                        <input type="number" max="9999" class="form-control" id="txtCilindraje"
+                            placeholder="Ingrese el cilindraje de la moto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idPropietario">identificacion Propietario</label>
+                        <input type="text" class="form-control" id="txtIdPropietario"
+                            placeholder="Ingrese la identificacion del propietario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numeroSoat">Numero del soat</label>
+                        <input type="number" class="form-control" id="txtNroSoat"
+                            placeholder="Ingrese el numero del soat" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vencimientoSoat">Vencimiento del soat</label>
+                        <input type="date" class="form-control" id="txtVencimientoSoat"
+                            placeholder="Ingrese la fecha de vencimiento del soat" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nroTecnomecanica">Numero de la tecnomecanica</label>
+                        <input type="number" class="form-control" id="txtNumeroTecnomecanita"
+                            placeholder="Ingrese el numero de la tecnomecanica" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="venTecnomecanica">Vencimiento de la tecnomecanica</label>
+                        <input type="date" class="form-control" id="txtVenTecnomecanica"
+                            placeholder="Ingrese la fecha de vencimiento de la tecnomecanica" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btnCrearMoto">Ingresar moto</button>
+                    <button type="button" class="btn btn-primary" onclick="" id="btnActualizarMoto">Actualizar moto</button>    
+                </form>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Placa</th>
+                        <th scope="col">identificacion del propietario</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Clase</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Mas detalles</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Eliminar</th>
+                      </tr>
+                    </thead>
+                    <tbody id="listaMotos">
+                    </tbody>
+                  </table>
+                  <div id="mensaje">
+
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/motos.js"></script>
+    
+</body>
+</html>

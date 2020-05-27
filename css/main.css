@@ -1,0 +1,26 @@
+.miContenedor{
+    margin: 50px;
+    box-shadow: 0px 0px 6px gray;
+}
+
+#btnActualizarMoto{
+    display: none;
+}
+
+#btnCrearUsuario{
+    margin-bottom: 10px;
+}
+
+#btnCrearMoto{
+    margin-bottom: 10px;
+}
+
+#titulo{
+    margin-left: 50px;
+    margin-bottom: -40px;
+    margin-top: 20px;
+}
+
+#btnActualizarUsuario{
+    display: none;
+}
