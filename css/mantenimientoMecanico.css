@@ -1,0 +1,16 @@
+#tituloMecanico{
+    margin-left: 580px;
+    margin-top: 20px;
+}
+
+#tablaMantenimientos{
+    margin-right: 400px;
+    margin-left: 300px;
+    box-shadow: 0px 0px 6px gray;
+}
+
+.miContenedor{
+    margin: 50px;
+    box-shadow: 0px 0px 6px gray;
+    display: none;
+}
