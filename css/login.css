@@ -35,11 +35,11 @@
     padding-top: 4px;
 }
 
-.form-group#txtIdentificacion::before{
+.form-group#identificacion::before{
     content: "\f007";
 }
 
-.form-group#txtContraseña::before{
+.form-group#contraseña::before{
     content: "\f023";
 }
 
