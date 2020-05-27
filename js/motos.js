@@ -3,7 +3,7 @@ let motoActualizar = ""
 
 let atraparDatosMoto = () => {
     let placa = document.getElementById("txtPlaca").value
-    let estado = "en reparacion"
+    let estado = "mala"
     let clase = document.getElementById("txtClase").value
     let marca = document.getElementById("txtMarca").value
     let modelo = document.getElementById("txtModelo").value
@@ -66,7 +66,7 @@ let listarMotos = () => {
             data += `<td>${moto.estado}</td>`
             data += `<td><button type="button" onclick = "detallesMotos(${i})" class="btn btn-primary">Detalles</button></td>`
             data += `<td><button type="button" onclick = "cargarDatos(${i})" class="btn btn-primary">Editar</button></td>`
-            data += `<td><button type="button" onclick = "eliminarLink(${moto.placa})" class="btn btn-primary">Eliminar</button></td>`
+            data += `<td><button type="button" onclick = "eliminarMoto(${moto.placa})" class="btn btn-primary">Eliminar</button></td>`
             data += "</tr>"
         }
         lista.innerHTML = data;
