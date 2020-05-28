@@ -13,4 +13,16 @@ let dirigirMantenimientoMecanico = () => {
     location.href="../pages/mantenimientoMecanico.html"
 }
 
+let validarTokenMecanico = () => {
+    let token = localStorage.getItem("token")
+    axios.get("http://localhost:3000/api/v1/autenticacion",{headers:{"token":token}}).then(respuesta => {
+        console.log(respuesta)
+    }).catch(error => {
+        console.log(error)
+        location.href="../pages/autenticacion.html"
+    })
+}
+
+validarTokenMecanico();
+
 asignarNombreMecanico();

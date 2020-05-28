@@ -22,4 +22,15 @@ let dirigirConsolidado = () => {
     location.href="../pages/consolidados.html"
 }
 
+let validarTokenAdmin = () => {
+    let token = localStorage.getItem("token")
+    axios.get("http://localhost:3000/api/v1/autenticacion",{headers:{"token":token}}).then(respuesta => {
+        console.log(respuesta)
+    }).catch(error => {
+        console.log(error)
+        location.href="../pages/autenticacion.html"
+    })
+}
+
+validarTokenAdmin();
 asignarNombre();

@@ -38,7 +38,13 @@ let validarLogin = () => {
     })
 }
 
+let limpiarToken = () => {
+    localStorage.setItem("token","ninguno")
+}
+
 let limpiarCampos = () => {
     let documento = document.getElementById("txtDocumento").value = ""
     let clave = document.getElementById("txtContraseña").value = ""
 }
+
+limpiarToken();
