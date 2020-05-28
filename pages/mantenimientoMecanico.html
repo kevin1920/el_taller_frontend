@@ -23,12 +23,15 @@
                 </thead>
                 <tbody id="listaMantenimientos">
                 </tbody>
+                <div id="mensajeMantenimiento">
+
+                </div>
             </table>
         </div>
       </div>
 
       <div class="miContenedor">
-        <div class="card">
+        <div class="card" id="contenedorActualizar">
             <div class="card-body">
                 <form action="javascript:void(0)" onsubmit="">
                     <div class="form-group">
@@ -40,11 +43,8 @@
                         <input type="text" class="form-control" id="txtHorasInvertidas" placeholder="Ingrese las horas invertidas" required>
                     </div>
     
-                    <button type="submit" class="btn btn-primary" id="btnCrearMoto">Actualizar</button>   
+                    <button type="submit" class="btn btn-primary" onclick="actualizarMantenimieto()" id="btnCrearMoto">Actualizar</button>   
                 </form>
-                  <div id="mensajeMotos">
-
-                  </div>
             </div>
         </div>
     </div>
@@ -58,5 +58,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/mantenimientoMecanico.js"></script>
 </body>
 </html>

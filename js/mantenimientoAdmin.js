@@ -101,7 +101,7 @@ let asignarMantenimiento = () => {
             </div>`
             mensaje.innerHTML = data
     }else{
-        let info = {idMecanico:idMecanico,placa:idMoto,fecha:fecha}
+        let info = {idMecanico:idMecanico,placa:idMoto,fecha:fecha,trabajosRealizados:"ninguno",horasInvertidas:0}
         let token = localStorage.getItem("token");
         axios.post("http://localhost:3000/api/v1/mantenimientos",info,{headers:{"token":token}}).then(respuesta => {
             axios.put(`http://localhost:3000/api/v1/estado/${idMoto}`,{estado:"en reparacion"},{headers:{"token":token}}).then(respuesta => {
