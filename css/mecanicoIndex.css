@@ -1,5 +1,5 @@
 #tituloMecanico{
-    margin-left: 600px;
+    margin-left: 650px;
     margin-top: 50px;
 }
 
@@ -7,3 +7,7 @@
     margin-top: 5%;
 }
 
+#btnCerrarSesion{
+    margin-left: 1200px;
+    margin-top: -85px;
+}

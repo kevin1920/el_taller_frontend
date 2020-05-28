@@ -35,6 +35,10 @@ let validarLogin = () => {
         }
     }).catch(error => {
         console.log(error)
+        data = `<div class="alert alert-danger" role="alert">
+            Todos los campos son obligatorios <a href="#" class="alert-link"></a>
+            </div>`
+            mensaje.innerHTML = data
     })
 }
 

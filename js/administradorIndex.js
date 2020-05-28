@@ -22,6 +22,10 @@ let dirigirConsolidado = () => {
     location.href="../pages/consolidados.html"
 }
 
+let cerrarSesionAdmin = () => {
+    location.href="../index.html"
+}
+
 let validarTokenAdmin = () => {
     let token = localStorage.getItem("token")
     axios.get("http://localhost:3000/api/v1/autenticacion",{headers:{"token":token}}).then(respuesta => {
@@ -31,6 +35,7 @@ let validarTokenAdmin = () => {
         location.href="../pages/autenticacion.html"
     })
 }
+
 
 validarTokenAdmin();
 asignarNombre();

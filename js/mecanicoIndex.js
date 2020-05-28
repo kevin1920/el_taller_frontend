@@ -13,6 +13,10 @@ let dirigirMantenimientoMecanico = () => {
     location.href="../pages/mantenimientoMecanico.html"
 }
 
+let cerrarSesionMecanico = () => {
+    location.href="../index.html"
+}
+
 let validarTokenMecanico = () => {
     let token = localStorage.getItem("token")
     axios.get("http://localhost:3000/api/v1/autenticacion",{headers:{"token":token}}).then(respuesta => {
