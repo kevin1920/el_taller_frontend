@@ -14,11 +14,19 @@ let validarLogin = () => {
     axios.post("http://localhost:3000/api/v1/login",info).then(respuesta => {
         if(respuesta.data.ok === true){
             let token = respuesta.data.info;
+            let nombre = respuesta.data.usuario.nombre
+            let rol = respuesta.data.usuario.rol
             localStorage.setItem("token",token)
+            localStorage.setItem("documento",info.documento)
+            localStorage.setItem("nombre",nombre)
             limpiarCampos()
             data = ""
             mensaje.innerHTML = data
-            location.href="../pages/motos.html"
+            if(rol === "Administrador"){
+                location.href="../pages/administradorIndex.html"
+            }else{
+                location.href="../pages/mecanicoIndex.html"
+            }
         }else{
             data = `<div class="alert alert-danger" role="alert">
             El documento y/o contraseña es incorrecta <a href="#" class="alert-link"></a>

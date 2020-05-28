@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="../css/administradorIndex.css">
 </head>
 <body>
-    <h1 id="tituloAdmin">Hola</h1>
+    <div id="tituloAdmin">
+        
+    </div>
 
     <div class="container">
         <div class="row justify-content-center">
@@ -19,7 +21,7 @@
                     <div class="card-body text-center">
                       <h5 class="card-title">Usuarios</h5>
                       <p class="card-text">Crea, modifica y elimina un usuario</p>
-                      <a href="#" class="btn btn-primary">Usuarios</a>
+                      <a href="#" class="btn btn-primary" onclick="dirigirUsuariosAdmin()">Usuarios</a>
                     </div>
                 </div>
             </div>
@@ -29,7 +31,7 @@
                     <div class="card-body text-center">
                       <h5 class="card-title">Motos</h5>
                       <p class="card-text">Crea, modifica y elimina una moto</p>
-                      <a href="#" class="btn btn-primary">Motos</a>
+                      <a href="#" class="btn btn-primary" onclick="dirigirMotosAdmin()">Motos</a>
                     </div>
                 </div>
             </div>
@@ -39,7 +41,7 @@
                     <div class="card-body text-center">
                       <h5 class="card-title">Mantenimiento</h5>
                       <p class="card-text">Asigna una moto a un mecanico para su mantenimiento</p>
-                      <a href="#" class="btn btn-primary">Mantenimiento</a>
+                      <a href="#" class="btn btn-primary" onclick="dirigirMantenimientoAdmin()">Mantenimiento</a>
                     </div>
                 </div>
             </div>
@@ -49,7 +51,7 @@
                     <div class="card-body text-center">
                       <h5 class="card-title">Consolidado</h5>
                       <p class="card-text">Visualiza un consolidado de horas trabajadas de los mecanicos entre dos fechas</p>
-                      <a href="#" class="btn btn-primary">Consolidado</a>
+                      <a href="#" class="btn btn-primary" onclick="dirigirConsolidado()">Consolidado</a>
                     </div>
                 </div>
             </div>
@@ -67,5 +69,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="../js/administradorIndex.js"></script>
 </body>
 </html>

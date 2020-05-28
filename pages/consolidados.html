@@ -13,13 +13,13 @@
     <div class="miContenedor">
         <div class="card">
             <div class="card-body">
-                <form action="javascript:void(0)" onsubmit="">
+                <form action="javascript:void(0)" onsubmit="listarConsolidado()">
                     <div class="form-group">
-                        <label for="clase">Trabajos realizados</label>
+                        <label for="clase">Ingrese la fecha inferior</label>
                         <input type="date" class="form-control" id="txtFechaInferior" placeholder="Ingrese la fecha inferior" required>
                     </div>
                     <div class="form-group">
-                        <label for="marca">Horas invertidas</label>
+                        <label for="marca">Ingrese la fecha superior</label>
                         <input type="date" class="form-control" id="txtFechaSuperior" placeholder="Ingrese la fecha superior" required>
                     </div>
     
@@ -36,7 +36,7 @@
                                 <th scope="col">Horas trabajadas</th>
                               </tr>
                             </thead>
-                            <tbody id="listaMantenimientos">
+                            <tbody id="listaConsolidados">
                             </tbody>
                         </table>
                     </div>
@@ -55,5 +55,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/consolidados.js"></script>
 </body>
 </html>
