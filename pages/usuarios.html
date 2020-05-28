@@ -13,7 +13,7 @@
     <div class="miContenedor">
         <div class="card">
             <div class="card-body">
-                <form action="javascript:void(0)" onsubmit="">
+                <form action="javascript:void(0)" onsubmit="guardarMoto()">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Tipo de documento</label>
                         <select class="form-control" id="cmbTipoDocumento">
@@ -23,7 +23,7 @@
                             <option value="4">Pasaporte</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="documento">
                         <label for="documento">Documento</label>
                         <input type="number" class="form-control" id="txtDocumento"
                             placeholder="Ingrese el documento" required>
@@ -52,14 +52,14 @@
                             <option value="2">Administrador</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="contraseña">
                         <label for="contraseña">Contraseña</label>
                         <input type="password" class="form-control" id="txtContraseña"
                             placeholder="Ingrese la contraseña" required>
                     </div>
                 
                     <button type="submit" class="btn btn-primary" id="btnCrearUsuario">Crear Usuario</button>
-                    <button type="button" class="btn btn-primary" onclick="" id="btnActualizarUsuario">Actualizar</button>    
+                    <button type="button" class="btn btn-primary" onclick="actualizarUsuario()" id="btnActualizarUsuario">Actualizar</button>    
                 </form>
                 <table class="table">
                     <thead>
@@ -91,6 +91,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/usuarios.js"></script>
     
 </body>

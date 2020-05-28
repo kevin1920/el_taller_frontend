@@ -29,7 +29,7 @@
                     </table>
                     <div class="form-group">
                         <label for="apellidos">Mecanico</label>
-                        <input type="text" class="form-control" id="txtMecanico" required>
+                        <input type="text" class="form-control" id="txtMecanico" disabled="disabled" required>
                     </div>
                 </div>
               </div>
@@ -48,16 +48,18 @@
                     </table>
                     <div class="form-group">
                         <label for="apellidos">Placa</label>
-                        <input type="text" class="form-control" id="txtPlaca" required>
+                        <input type="text" class="form-control" id="txtPlaca" disabled="disabled" required>
                     </div>
                 </div>
               </div>
         </div>
       </div>
 
-    
+      <button type="button" class="btn btn-primary" onclick="asignarMantenimiento()" id="btnAsignarMantenimiento">Asignar mantenimiento</button> 
 
-      <button type="button" class="btn btn-primary" onclick="" id="btnAsignarMantenimiento">Asignar mantenimiento</button> 
+      <div id="mensajeMantenimiento">
+
+      </div>
 
       <div class="card" id="tablaMantenimientos">
         <div class="card-body">
@@ -67,6 +69,7 @@
                     <th scope="col">Documento</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellidos</th>
+                    <th scope="col">Placa</th>
                     <th scope="col">Fecha</th>
                     <th scope="col">Eliminar</th>
                   </tr>
@@ -86,5 +89,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/mantenimientoAdmin.js"></script>
 </body>
 </html>

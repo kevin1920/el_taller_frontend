@@ -9,4 +9,5 @@
 
 body{
     background: url(../img/background.jpg);
+    background-size: auto;
 }
