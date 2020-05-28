@@ -64,9 +64,8 @@ let listarMotos = () => {
             data += `<td>${moto.id_propietario}</td>`
             data += `<td>${moto.marca}</td>`
             data += `<td>${moto.estado}</td>`
-            data += `<td><button type="button" onclick = "detallesMotos(${i})" class="btn btn-primary">Detalles</button></td>`
             data += `<td><button type="button" onclick = "cargarDatos(${i})" class="btn btn-primary">Editar</button></td>`
-            data += `<td><button type="button" onclick = "eliminarMoto(${moto.placa})" class="btn btn-primary">Eliminar</button></td>`
+            data += `<td><button type="button" onclick = "eliminarMoto('${moto.placa}')" class="btn btn-primary">Eliminar</button></td>`
             data += "</tr>"
         }
         lista.innerHTML = data;
@@ -114,6 +113,7 @@ let actualizarMoto = () => {
     })
 }
 
+
 let cargarDatos = index => {
     let moto = listaMotos[index]
     motoActualizar = moto.placa
@@ -132,6 +132,21 @@ let cargarDatos = index => {
     document.getElementById("txtVenTecnomecanica").value = moto.vencimiento_tecnomecanica.slice(0,10)
     document.getElementById("btnCrearMoto").style.display = "none"
     document.getElementById("btnActualizarMoto").style.display = "inline"
+}
+
+let eliminarMoto = placa => {
+    let mensaje = document.getElementById("mensajeMotos")
+    let data = ""
+    let token = localStorage.getItem("token");
+    axios.delete(`http://localhost:3000/api/v1/motos/${placa}`,{headers:{"token":token}}).then(respuesta => {
+        data = `<div class="alert alert-success" role="alert">
+        La moto se elimino correctamente <a href="#" class="alert-link"></a>
+        </div>`
+        mensaje.innerHTML = data
+        listarMotos();
+    }).catch(error => {
+        console.log(error)
+    })
 }
 
 let limpiarCampos = () => {
